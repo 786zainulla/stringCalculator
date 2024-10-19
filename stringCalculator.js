@@ -4,11 +4,11 @@ function add(numbers) {
 
     const delimiters = getDelimiters(numbers);
     const numberArray = splitNumbers(numbers, delimiters);
- 
     validateNumbers(numberArray);
 
     return numberArray.reduce((sum, num) => sum + parseInt(num, 10), 0);
 }
+
 // Know Delimiters in string
 function getDelimiters(numbers) {
     const customDelimiterMatch = numbers.match(/\/\/(.*?)\n/);
